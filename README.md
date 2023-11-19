@@ -35,10 +35,15 @@ Open http://localhost:4200 in your browser to see the frontend.
 
 To run the backend, you need to have Visual Studio and .NET 7 SDK installed on your machine. You can follow the steps below:
 Navigate to the backend folder in the file explorer.
+
 Double-click on the InventoryManagement.sln file to open the solution in Visual Studio.
+
 Update the connection string in the appsettings.json file if needed.
+
 Run Update-Database or entityframework/Update-Database in the Package Manager Console to apply the migrations to the database.
+
 Press F5 to run the backend project.
 The backend API will be available at http://localhost:15489/.
+
 To test the functionality, you can use the frontend UI or a tool like Postman to send requests to the backend API.
 I hope this helps you with your scenario. Please let me know if you have any questions or feedback. 😊
