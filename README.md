@@ -1,5 +1,7 @@
 # Inventory-Management-System
 
+Use master branch to check the code
+
 I have developed an inventory management system with Angular frontend, .NET 7 backend, and SQL Server database. Here is the code I have generated for you:
 
 Frontend(Angular):
