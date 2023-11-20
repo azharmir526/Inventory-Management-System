@@ -42,7 +42,7 @@ Double-click on the InventoryManagement.sln file to open the solution in Visual 
 
 Update the connection string in the appsettings.json file if needed.
 
-Run Update-Database or entityframework/Update-Database in the Package Manager Console to apply the migrations to the database.
+Run Update-Database or (EntityFrameworkCore\Enable-Migrations, EntityFrameworkCore\update-database in the Package Manager Console to apply the migrations to the database.
 
 Press F5 to run the backend project.
 The backend API will be available at http://localhost:15489/.
