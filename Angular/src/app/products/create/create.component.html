@@ -1,0 +1,48 @@
+<div class="container">
+    <h1>Create New Product</h1>
+  
+    <a href="#" routerLink="/products/index" class="btn btn-primary">Back</a>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="Name">Name:</label>
+            <input 
+                formControlName="Name"
+                id="Name" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['Name'].touched && f['Name'].invalid" class="alert alert-danger">
+                <div *ngIf="f['Name'].errors && f['Name'].errors['required']">Name is required.</div>
+            </div>
+        </div>
+  
+        <div class="form-group">
+            <label for="Description">Description:</label>
+            <textarea 
+                formControlName="Description"
+                id="Description" 
+                type="text" 
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['Description'].touched && f['Description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['Description'].errors && f['Description'].errors['required']">Description is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Quantity">Quantity:</label>
+            <textarea 
+                formControlName="Quantity"
+                id="Quantity" 
+                type="text" 
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['Quantity'].touched && f['Quantity'].invalid" class="alert alert-danger">
+                <div *ngIf="f['Quantity'].errors && f['Quantity'].errors['required']">Quantity is required.</div>
+            </div>
+        </div>
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>

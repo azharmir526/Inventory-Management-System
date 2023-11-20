@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>All Sales here</h1>
+    <br>      
+    <table class="table table-striped">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>ProductsId</th>
+                <th>Quantity</th>                
+                <th>Date</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let sale of sales">
+                <td>{{ sale.Id }}</td>
+                <td>{{ sale.ProductsId }}</td>
+                <td>{{ sale.Quantity }}</td>
+                <td>{{ sale.Date }}</td>
+                <td>
+                  <button type="button" (click)="deleteSale(sale.Id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+ </div>

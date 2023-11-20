@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>All Products here</h1>
+    <br>
+    <a href="#" routerLink="/products/create/" class="btn btn-success">Create New Product</a>
+      
+    <table class="table table-striped">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>                
+                <th>Quantity</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let product of products">
+                <td>{{ product.Id }}</td>
+                <td>{{ product.Name }}</td>
+                <td>{{ product.Description }}</td>
+                <td>{{ product.Quantity }}</td>
+                <td>
+                  <a href="#" [routerLink]="['/products/', product.Id, 'view']" class="btn btn-info">View</a>
+                  <a href="#" [routerLink]="['/products/', product.Id, 'edit']" class="btn btn-primary">Edit</a>
+                  <button type="button" (click)="deleteProduct(product.Id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+ </div>

@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>View Product</h1>
+  
+    <a href="#" routerLink="/products/index" class="btn btn-primary">Back</a>
+   
+    <div>
+        <strong>ID:</strong>
+        <p>{{ products.Id }}</p>
+    </div>
+   
+    <div>
+        <strong>Name:</strong>
+        <p>{{ products.Name }}</p>
+    </div>
+   
+    <div>
+        <strong>Description:</strong>
+        <p>{{ products.Description }}</p>
+    </div>
+
+    <div>
+        <strong>Quantity:</strong>
+        <p>{{ products.Quantity }}</p>
+    </div>
+
+    <div>
+        <label for="Quantitysales">Quantity To Sell:</label>
+        <input type="text" [(ngModel)]="quantitysales">
+        <div *ngIf="quantitysales == 0 || quantitysales == undefined" class="alert alert-danger">
+            <div>Quantity is required to sell.</div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" (click)="createSale()" [disabled]="quantitysales == 0 || quantitysales == undefined">Buy This Product</button>
+   
+</div>
